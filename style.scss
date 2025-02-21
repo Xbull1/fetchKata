@@ -1,0 +1,106 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+
+.main{
+  width:100%;
+  height: 100%;
+  background-color: #C4C4C4;
+  .content{
+    width: 100%;
+    height: 100%;
+    .content__header{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height:400px;
+      .search{
+        margin-top: 100px;
+        width: 500px;
+        height: 50px;
+        font-family: Roboto;
+        font-weight:bold;
+        font-size: 35px;
+      }
+      .autocomplete{
+        width: 500px;
+        height: fit-content;
+        .repository-card{
+          display: flex;
+          align-items: center;
+          height: 40px;
+          font-family: Roboto;
+          font-size: 30px;
+          background-color: #E3E3E3;
+          border: 1px solid #000000;
+          &:hover{
+            background-color: #65cdf9;
+          }
+        }
+      }
+    }
+    .content__bottom{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 500px;
+      .item-card{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 500px;
+        min-height: 100px;
+        max-height: 100px;
+        background-color: #e27beb;
+        padding: 0 30px 0 5px;
+        border: 1px solid #000000;
+        .item-card-wrapper{
+          >*{
+            padding: 3px;
+            font-family: Roboto;
+            font-size: 24px;
+          }
+        }
+        .item-card__remove{
+          background-color: transparent;
+          width: 42px;
+          height: 42px;
+          position: relative;
+          &:before{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: #ff0000;
+            transform: rotate(-45deg);
+          }
+          &:after{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: #ff0000;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}
